@@ -2,13 +2,23 @@
 let windowActive = false;
 let windowMinMax = false;
 
-
+function setTime() {
+        var d = new Date(); // for now
+        d.getHours(); // => 9
+        d.getMinutes(); // =>  30
+        d.getSeconds(); // => 51
+        const time = d.getHours() + ':' + d.getMinutes();
+        document.getElementsByClassName('time')[0].innerText = time;
+    
+}
+setTime()
+setInterval(setTime, 60000);
 
 // get right click
 const body = document.getElementsByClassName('body')[0]
 body.addEventListener('contextmenu', (e) => {
     e.preventDefault()
-    alert('yeah')
+    alert('This page is still under development')
 })
 
 // when you click element display window
@@ -50,12 +60,12 @@ function openWindow(type, element) {
             case 'react':
                 titleIcon.className += ' fab fa-react text-info'
                 title.innerText = 'ReactJs';
-                body.innerHTML = `<p> how are you</p>`
+                body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'node':
                 titleIcon.className += ' fab fa-node'
                 title.innerText = 'NodeJs';
-                body.innerHTML = `<p> how are you</p>`
+                body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'python':
                 titleIcon.className += ' fab fa-python'
@@ -74,17 +84,17 @@ function openWindow(type, element) {
             case 'java':
                 titleIcon.className += ' fab fa-java'
                 title.innerText = 'Java';
-                body.innerHTML = `<p> how are you</p>`
+                body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'android':
                 titleIcon.className += ' fab fa-android'
                 title.innerText = 'Android';
-                body.innerHTML = `<p> how are you</p>`
+                body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'php':
                 titleIcon.className += ' fab fa-php'
                 title.innerText = 'Php';
-                body.innerHTML = `<p> how are you</p>`
+                body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'js':
                 titleIcon.className += ' fab fa-js text-js'
@@ -142,7 +152,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
             case 'web':
                 titleIcon.className += ' fa fa-folder'
                 title.innerText = 'Web development';
-                body.innerHTML = `<p> how are you</p>`
+                body.innerHTML = `<p> This page is still under development</p>`
                 break;
         
             default:
