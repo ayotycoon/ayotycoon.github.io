@@ -198,10 +198,9 @@ function windowHeaderActions(type) {
     // type can be close, maximize or cancel
     if (type == 'close') {
         
-        __window.className = 'window border border-dark clearfix pt-1 bg-dark text-white animated fadeOutDown'
         setTimeout(() => {
             __window.style.display = 'none';
-            __window.className = 'window border border-dark clearfix pt-1 bg-dark text-white animated fadeIn'
+            
             document.getElementsByClassName('window-header-icon')[0].className = 'window-header-icon ml-1 mr-1'
         }, 500);
         
