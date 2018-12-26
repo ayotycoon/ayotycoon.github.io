@@ -28,7 +28,7 @@ body.addEventListener('contextmenu', (e) => {
 // when you click element display window
 function openWindow(type, element) {
     // show the window
-    initDrag();
+    
     if (!windowActive) {
         document.getElementsByClassName('window')[0].style.display = 'block';
         windowActive = true;
@@ -38,6 +38,7 @@ function openWindow(type, element) {
     const body = document.getElementsByClassName('window-body')[0];
 
     titleIcon.className = ' window-header-icon ml-1 mr-1';
+    titleIcon.innerHTML = '';
     // fab fa-angular
     if (type == 'icon') {
         switch (element) {
@@ -130,7 +131,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
 
 
             case 'ns':
-                titleIcon.className += ' fab fa-ns'
+                titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/nativescript.svg">'
                 title.innerText = 'NativeScript';
                 body.innerHTML = `
                 <h3>What is NativeScript?</h3>
@@ -141,6 +142,24 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 <img class="bg-dark rounded" src="images/gpcalc.png"></img>
                 <p>GpCalc Mobile</p>
                 </div>
+
+
+                `
+                break;
+            case 'kotlin':
+                titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/kotlin.svg">'
+                title.innerText = 'Kotlin';
+                body.innerHTML = `
+                <h3>What is Kotlin?</h3>
+                
+                `
+                break;
+            case 'about':
+                titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/ayo.jpg">'
+                title.innerText = 'Sunmola Ayokunle';
+                body.innerHTML = `
+                <h3>Ayokunle</h3>
+                
 
 
                 `
@@ -158,11 +177,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 title.innerText = 'Web development';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
-            case 'education':
-                titleIcon.className += ' fa fa-folder'
-                title.innerText = 'Education';
-                body.innerHTML = `<p> This page is still under development</p>`
-                break;
+
             case 'desktop':
                 titleIcon.className += ' fa fa-folder'
                 title.innerText = 'Desktop development';
@@ -222,7 +237,7 @@ function windowHeaderActions(type) {
             windowMinMax = false;
             // change max icon
             document.getElementsByClassName('maxMin')[0].className = 'maxMin far fa-square fa-actions ml-3 cursor'
-            initDrag()
+            
         } else { // if its not yet maximized
 
 
@@ -237,7 +252,7 @@ function windowHeaderActions(type) {
             windowMinMax = true;
             // change max icon
             document.getElementsByClassName('maxMin')[0].className = 'maxMin fa fa-long-arrow-alt-up fa-actions ml-3 cursor'
-            initDrag()
+            
         }
 
     }
@@ -246,3 +261,4 @@ function windowHeaderActions(type) {
 function test(e) {
     console.log(e);
 }
+openWindow('icon', 'about');
