@@ -198,11 +198,10 @@ function windowHeaderActions(type) {
     // type can be close, maximize or cancel
     if (type == 'close') {
         
-        setTimeout(() => {
-            __window.style.display = 'none';
-            
-            document.getElementsByClassName('window-header-icon')[0].className = 'window-header-icon ml-1 mr-1'
-        }, 500);
+        __window.style.display = 'none';
+
+        document.getElementsByClassName('window-header-icon')[0].className = 'window-header-icon ml-1 mr-1'
+
         
         
         windowActive = false
