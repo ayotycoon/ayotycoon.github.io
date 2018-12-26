@@ -118,12 +118,12 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 <p>GpCalc Mobile</p>
                 </div>
                 <div class="d-inline-block m-2 window-project-icon text-center">
-                <img class="bg-dark rounded" src="images/gpcalc.png"></img>
+                <img class="bg-dark rounded" src="./images/gpcalc.png"></img>
                 <p>GpCalc Web App</p>
                 </div>
 
                 <div class="d-inline-block m-2 window-project-icon text-center">
-                <img class="bg-dark rounded" src="images/gpcalc.png"></img>
+                <img class="bg-dark rounded" src="./images/gpcalc.png"></img>
                 <p>ayotycoon.github.io web</p>
                 </div>
                 `
@@ -139,7 +139,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 <h3>How good am i in this framework?</h3>
                 <p> NativeScript is a Javascript framework, i love javascript so i'm also very good with NativeScript. I mostly use Angular with my Nativescript Applications</h3>
                 <div class="d-inline-block m-2 window-project-icon text-center">
-                <img class="bg-dark rounded" src="images/gpcalc.png"></img>
+                <img class="bg-dark rounded" src="./images/gpcalc.png"></img>
                 <p>GpCalc Mobile</p>
                 </div>
 
