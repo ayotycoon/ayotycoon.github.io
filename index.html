@@ -33,6 +33,13 @@
 </head>
 
 <body>
+	<div class="chevron-box p-2 bg-dark animated fadeInUp faster">
+		<i class=" p-1 fa fa-wifi"></i>
+		<i class=" p-1 fa fa-wifi"></i>
+		<br>
+		<i class=" p-1 fa fa-wifi"></i>
+		<i class=" p-1 fa fa-wifi"></i>
+	</div>
 	<div class="body">
 		<div class="inner-body p-3">
 			<div onclick="openWindow('icon', 'about')" class="each-desktop-icon-container pb-2">
@@ -106,6 +113,14 @@
 				<i class="fab fa-php each-desktop-icon"></i>
 				<span class="pt-1 d-block text-center desktop-text">Php</span>
 			</div>
+			<div onclick="openWindow('icon', 'html')" class="each-desktop-icon-container pb-2">
+				<i class="fab fa-html5 each-desktop-icon"></i>
+				<span class="pt-1 d-block text-center desktop-text">Html 5</span>
+			</div>
+			<div onclick="openWindow('icon', 'css')" class="each-desktop-icon-container pb-2">
+				<i class="fab fa-css3 each-desktop-icon"></i>
+				<span class="pt-1 d-block text-center desktop-text">Css 3</span>
+			</div>
 
 
 
@@ -138,20 +153,14 @@
 				<div class="col-1">
 					<i class="each-footer-icon fab fa-windows"></i>
 				</div>
-				<div class="col-6 normal-tb">
-
-					<i class="ml-3 each-footer-icon fab fa-js"></i>
-					<i class="ml-3 each-footer-icon fab fa-html5"></i>
-					<i class="ml-3 each-footer-icon fab fa-css3"></i>
-					<i class="ml-3 each-footer-icon fab fa-angular"></i>
-					<i class="ml-3 each-footer-icon fab fa-react"></i>
-					:
+				<div class="col-5 normal-tb">
+					
 				</div>
 				
 				<!--right side taskbar-->
-				<div class="col-5 text-right right-tb">
-
-					<i class=" ml-3 fa fa-chevron-up"></i>
+				<div class="col-6 text-right right-tb">
+					
+					<i onClick="chevronOpen()" class=" ml-3 fa fa-chevron-up"></i>
 					<i class=" ml-3 fa fa-wifi"></i>
 					<i class=" ml-3 fa fa-battery-three-quarters"></i>
 					<span class="ml-3 time">

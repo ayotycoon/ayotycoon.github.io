@@ -1,6 +1,35 @@
 //global variables
 let windowActive = false;
 let windowMinMax = false;
+let chevron = false;
+
+/*
+<div class="chevron-box">44</div>
+*/
+function chevronOpen() {
+    let cheIcon = document.getElementsByClassName('fa-chevron-up')[0].getBoundingClientRect();
+    let cheOptions = document.getElementsByClassName('chevron-box')[0];
+
+    che_X = cheIcon.x;
+    che_Y = cheIcon.y;
+    che_height = cheIcon.height;
+
+    // set chev options to the up of chev icon
+    if (!chevron){
+        cheOptions.style.display = 'block';
+        cheOptions.style.left = che_X - cheOptions.getBoundingClientRect().width / 2 + 'px';
+        cheOptions.style.top = che_Y - 5 * che_height + 'px';
+        chevron = true;
+    }else{
+        cheOptions.style.display = 'none';
+        chevron = false;
+    }
+    
+}
+
+
+
+
 // get screen size
 var isWeb = true;
 if(window.innerWidth <= 772) {
@@ -36,13 +65,14 @@ function openWindow(type, element) {
     const title = document.getElementsByClassName('window-header-title')[0];
     const titleIcon = document.getElementsByClassName('window-header-icon')[0];
     const body = document.getElementsByClassName('window-body')[0];
-
+    const taskBar = document.getElementsByClassName('normal-tb')[0];
     titleIcon.className = ' window-header-icon ml-1 mr-1';
     titleIcon.innerHTML = '';
     // fab fa-angular
     if (type == 'icon') {
         switch (element) {
             case 'angular':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-angular animated fadeIn" title="Angular"></i>'
                 titleIcon.className += ' fab fa-angular text-danger'
                 title.innerText = 'Angular';
                 body.innerHTML = `
@@ -61,18 +91,34 @@ function openWindow(type, element) {
                 </div>
 
                 `
+                
                 break;
             case 'react':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-react animated fadeIn" title="React"></i>'
                 titleIcon.className += ' fab fa-react text-info'
                 title.innerText = 'ReactJs';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
+            case 'html':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-html5 animated fadeIn" title="Html5"></i>'
+                titleIcon.className += ' fab fa-html5'
+                title.innerText = 'Html 5';
+                body.innerHTML = `<p> This page is still under development</p>`
+                break;
+            case 'css':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-css3 animated fadeIn"  title="css3"></i>'
+                titleIcon.className += ' fab fa-css3'
+                title.innerText = 'Css 3';
+                body.innerHTML = `<p> This page is still under development</p>`
+                break;
             case 'node':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-node animated fadeIn" title="Node js"></i>'
                 titleIcon.className += ' fab fa-node'
                 title.innerText = 'NodeJs';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'python':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-python animated fadeIn" title="Python"></i>'
                 titleIcon.className += ' fab fa-python'
                 title.innerText = 'Python';
                 body.innerHTML = `
@@ -87,21 +133,26 @@ function openWindow(type, element) {
                 `
                 break;
             case 'java':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-java animated fadeIn" title="Java"></i>'
                 titleIcon.className += ' fab fa-java'
                 title.innerText = 'Java';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'android':
+            
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-android animated fadeIn" title="Android"></i>'
                 titleIcon.className += ' fab fa-android'
                 title.innerText = 'Android';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'php':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-php animated fadeIn" title="Php"></i>'
                 titleIcon.className += ' fab fa-php'
                 title.innerText = 'Php';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
             case 'js':
+                taskBar.innerHTML += ' <i class="ml-3 each-footer-icon fab fa-js animated fadeIn" title="JavaScript"></i>'
                 titleIcon.className += ' fab fa-js text-js'
                 title.innerText = 'JavaScript';
                 body.innerHTML = `
@@ -131,6 +182,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
 
 
             case 'ns':
+                taskBar.innerHTML += ' <img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/nativescript.svg" title="NativeScript">'
                 titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/nativescript.svg">'
                 title.innerText = 'NativeScript';
                 body.innerHTML = `
@@ -147,6 +199,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 `
                 break;
             case 'kotlin':
+                taskBar.innerHTML += ' <img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/kotlin.svg" title="Kotlin">'
                 titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/kotlin.svg">'
                 title.innerText = 'Kotlin';
                 body.innerHTML = `
@@ -155,12 +208,30 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 `
                 break;
             case 'about':
+                taskBar.innerHTML += ' <img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/ayo.jpg" title="Sunmola ayokunle">'
                 titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/ayo.jpg">'
                 title.innerText = 'Sunmola Ayokunle';
                 body.innerHTML = `
-                <h3>Ayokunle</h3>
+                <h3>Sunmola Ayokunle</h3>
+                <p>- Lead programmer with a sole aim of incorporating user and business requirements into cost-effective, secure and user-friendly solutions known for scalability and durability.</p>
+                <p>- Knowledge of commercial and open source software/database engineering tools, design techniques, CASE tools and security standards.</p>
+                <p>- Proven leader and project manager; drive system architecture decisions and lead projects from concept through the release process.</p>
+                <p>- Innovator of next-generation solutions, systems and applications giving companies a competitive edge and producing outstanding results for customers.</p>
                 
-
+                <h3>Technology Summary</h3>
+                <h5>Web Development</h5>
+                NodeJs, Express, MongoDb, Mysql, Angular, React, JavaScript, CSS/LESS/Sass, Html, Bootstrap, Typescript</br>
+                Php, laravel, slimPHP
+                <h5>Mobile Development</h5>
+                NodeJs, Nativescript, Android Studio, Java, Javascript, Kotlin, Angular
+                <h5>Software Development</h5>
+                NodeJs, Electron
+                <h5>Languages</h5>
+                Java, Javascript, TypeScript, Python, Php, Kotlin, Octave
+                <h5>Data Science and Ai</h5>
+                Python, Numpy, Pandas, Opencv, Octave.
+                <h5>Others</h5>
+                Git, XML,  Windows
 
                 `
                 break;
@@ -203,8 +274,10 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 break;
         }
 
-    }
 
+    
+    }
+    taskBar.scrollTop = taskBar.scrollHeight;
 
 
 }
