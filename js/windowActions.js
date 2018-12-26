@@ -2,6 +2,8 @@ function initDrag() {
 
 
     let dragItem = document.querySelector(".window");
+    let dragText = document.querySelector(".window-header-title");
+    let dragTextIcon = document.querySelector(".window-header-icon");
     let container = document.querySelector(".window");
     let active = false;
     let currentX;
@@ -43,7 +45,7 @@ function initDrag() {
             initialY = e.clientY - yOffset;
         }
 
-        if (e.target === dragItem) {
+        if ((e.target === dragItem) || (e.target === dragText) || (e.target === dragTextIcon)) {
             active = true;
         }
     }

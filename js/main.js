@@ -1,13 +1,17 @@
 //global variables
 let windowActive = false;
 let windowMinMax = false;
-
+// get screen size
+var isWeb = true;
+if(window.innerWidth <= 772) {
+isWeb = false;
+}
 function setTime() {
         var d = new Date(); // for now
         d.getHours(); // => 9
         d.getMinutes(); // =>  30
         d.getSeconds(); // => 51
-        const time = d.getHours() + ':' + d.getMinutes();
+    const time = d.getHours() + ':' + (d.getMinutes().toString().length != 1 ? d.getMinutes() : '0' + d.getMinutes() );
         document.getElementsByClassName('time')[0].innerText = time;
     
 }
@@ -154,6 +158,31 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 title.innerText = 'Web development';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
+            case 'education':
+                titleIcon.className += ' fa fa-folder'
+                title.innerText = 'Education';
+                body.innerHTML = `<p> This page is still under development</p>`
+                break;
+            case 'desktop':
+                titleIcon.className += ' fa fa-folder'
+                title.innerText = 'Desktop development';
+                body.innerHTML = `<p> This page is still under development</p>`
+                break;
+            case 'mobile':
+                titleIcon.className += ' fa fa-folder'
+                title.innerText = 'Mobile development';
+                body.innerHTML = `<p> This page is still under development</p>`
+                break;
+            case 'data':
+                titleIcon.className += ' fa fa-folder'
+                title.innerText = 'Data Analysis and AI';
+                body.innerHTML = `<p> This page is still under development</p>`
+                break;
+            case 'languages':
+                titleIcon.className += ' fa fa-folder'
+                title.innerText = 'Languages';
+                body.innerHTML = `<p> This page is still under development</p>`
+                break;
         
             default:
                 break;
@@ -168,32 +197,39 @@ function windowHeaderActions(type) {
     const __window = document.getElementsByClassName('window')[0]
     // type can be close, maximize or cancel
     if (type == 'close') {
-        __window.style.display = 'none';
-        document.getElementsByClassName('window-header-icon')[0].className = 'window-header-icon ml-1 mr-1'
+        
+        __window.className = 'window border border-dark clearfix pt-1 bg-dark text-white animated fadeOutDown'
+        setTimeout(() => {
+            __window.style.display = 'none';
+            __window.className = 'window border border-dark clearfix pt-1 bg-dark text-white animated fadeInUp'
+            document.getElementsByClassName('window-header-icon')[0].className = 'window-header-icon ml-1 mr-1'
+        }, 500);
+        
+        
         windowActive = false
     }
-    /*
 
-  min-width: 50%;
-  height: 500px;
-  margin-left: 50px;
-  margin-top: 50px;
-    */
     if (type == 'minMax') {
+        if (windowMinMax) { // if its already maximized
+            if(isWeb) {
+                __window.style.width = '50%';
+                __window.style.marginLeft = '50px';
+            }else {
+                __window.style.width = '90%';
+                __window.style.marginLeft = '10px';
+            }
 
-        if (windowMinMax) {
-            __window.style.width = '50%';
-            __window.style.height = '500px';
-            __window.style.marginLeft = '50px';
             __window.style.marginTop = '50px';
+            __window.style.height = '500px';
             windowMinMax = false;
+            // change max icon
+            document.getElementsByClassName('maxMin')[0].className = 'maxMin far fa-square fa-actions ml-3 cursor'
             initDrag()
-        } else {
+        } else { // if its not yet maximized
 
-            __window.style.position = 'static';
-            __window.style.position = 'absolute';
-            __window.style.top = '0%';
-            __window.style.left = '0%';
+
+ 
+            __window.style.transform = 'none';
 
             __window.style.width = '100%';
             __window.style.height = '100%';
@@ -201,6 +237,8 @@ function windowHeaderActions(type) {
             __window.style.marginTop = '0';
 
             windowMinMax = true;
+            // change max icon
+            document.getElementsByClassName('maxMin')[0].className = 'maxMin fa fa-long-arrow-alt-up fa-actions ml-3 cursor'
             initDrag()
         }
 
