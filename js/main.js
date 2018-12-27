@@ -255,13 +255,13 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 <p>- Innovator of next-generation solutions, systems and applications giving companies a competitive edge and producing outstanding results for customers.</p>
                 
                 <h3>Education & Credentials</h3>
-                <div class="p-2 border border-white rounded">
+                <div class="p-2 border-top border-white rounded">
 B.Eng Computer Engineering. Olabisi Onabanjo University
                 </div>
                 
             <br>
                 <h3>Technology Summary</h3>
-                <div class="p-2 border border-white rounded">
+                <div class="p-2 border-top border-white rounded">
  <h5>Web Development</h5>
                 NodeJs, Express, MongoDb, Mysql, Angular, React, JavaScript, CSS/LESS/Sass, Html, Bootstrap, Typescript</br>
                 Php, laravel, slimPHP
@@ -277,7 +277,7 @@ B.Eng Computer Engineering. Olabisi Onabanjo University
                 </div>
             <br>
                 <h3>Others</h3>
-                <div class="p-2 border border-white rounded">
+                <div class="p-2 border-top border-white rounded">
 Git, XML,  Windows
                 </div>
                 
@@ -346,7 +346,7 @@ function windowHeaderActions(type) {
         __window.className+=' animated zoomOutDown'
         setTimeout(() => {
             __window.style.display = 'none';
-            document.getElementsByClassName('window')[0].className = 'window border border-dark clearfix pt-1 bg-dark text-white';
+            document.getElementsByClassName('window')[0].className = 'window border-top border-dark clearfix pt-1 bg-dark text-white';
             windowActive = false
         }, 300);
     }

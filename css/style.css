@@ -18,6 +18,14 @@ body {
 .cursor {
   cursor: pointer;
 }
+::-webkit-scrollbar{
+  background-color:transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#E94A4E;
+  
+}
 .inner-body {
   width: 350px;
   height: 100% !important;
