@@ -69,15 +69,14 @@ colors
 .window {
   position: absolute;
   top: 0%;
-  height: 100%;
   display: none;
-  width: 50%;
-  height: 500px;
+  width: 70%;
+  height: 600px;
   margin-left: 50px;
   margin-top: 50px;
 
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inconsolata;
 }
 
 .window-action-header-right,
@@ -88,7 +87,8 @@ colors
   height: 95%;
   height: 100%;
   overflow: auto;
-  background-color: #ebeef1;
+  background-color: #021E45;
+  color: white;
 }
 .window-project-icon {
   width: 100px;
@@ -126,6 +126,24 @@ img {
 }
 .fa {
   cursor: pointer;
+}
+/*fonts */
+.font-1{
+  font-family: exo;
+  font-weight: bold;
+
+}
+.window h3, .l1{
+  color: #E94A4E;
+}
+.window h5{
+  color: yellow;
+}
+.l2{
+
+}
+.jump_anim{
+  max-width: 300px;
 }
 @media (max-width: 772px) {
   .normal-tb,

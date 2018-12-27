@@ -212,12 +212,24 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/ayo.jpg">'
                 title.innerText = 'Sunmola Ayokunle';
                 body.innerHTML = `
-                <h3>Sunmola Ayokunle</h3>
+                
+                <h2 class="font-1">Hi, I'm Sunmola Ayokunle.
+                <br>
+                A <span class="l1">Software Engineer</span> in Nigeria.
+                <div style="width=100%" class="text-center">
+<img src="./images/ff.gif" class="jump_anim">
+                </div>
+                
+                
+                </h2>
                 <p>- Lead programmer with a sole aim of incorporating user and business requirements into cost-effective, secure and user-friendly solutions known for scalability and durability.</p>
                 <p>- Knowledge of commercial and open source software/database engineering tools, design techniques, CASE tools and security standards.</p>
                 <p>- Proven leader and project manager; drive system architecture decisions and lead projects from concept through the release process.</p>
                 <p>- Innovator of next-generation solutions, systems and applications giving companies a competitive edge and producing outstanding results for customers.</p>
                 
+                <h3>Education & Credentials</h3>
+                B.Eng Computer Engineering. Olabisi Onabanjo University
+
                 <h3>Technology Summary</h3>
                 <h5>Web Development</h5>
                 NodeJs, Express, MongoDb, Mysql, Angular, React, JavaScript, CSS/LESS/Sass, Html, Bootstrap, Typescript</br>
@@ -228,9 +240,9 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 NodeJs, Electron
                 <h5>Languages</h5>
                 Java, Javascript, TypeScript, Python, Php, Kotlin, Octave
-                <h5>Data Science and Ai</h5>
+                <h3>Data Science and Ai</h3>
                 Python, Numpy, Pandas, Opencv, Octave.
-                <h5>Others</h5>
+                <h3>Others</h3>
                 Git, XML,  Windows
 
                 `
@@ -264,12 +276,6 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 title.innerText = 'Data Analysis and AI';
                 body.innerHTML = `<p> This page is still under development</p>`
                 break;
-            case 'languages':
-                titleIcon.className += ' fa fa-folder'
-                title.innerText = 'Languages';
-                body.innerHTML = `<p> This page is still under development</p>`
-                break;
-        
             default:
                 break;
         }
@@ -298,7 +304,7 @@ function windowHeaderActions(type) {
     if (type == 'minMax') {
         if (windowMinMax) { // if its already maximized
             if(isWeb) {
-                __window.style.width = '50%';
+                __window.style.width = '70%';
                 __window.style.marginLeft = '50px';
             }else {
                 __window.style.width = '90%';
