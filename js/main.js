@@ -228,10 +228,14 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 <p>- Innovator of next-generation solutions, systems and applications giving companies a competitive edge and producing outstanding results for customers.</p>
                 
                 <h3>Education & Credentials</h3>
-                B.Eng Computer Engineering. Olabisi Onabanjo University
-
+                <div class="p-2 border border-white rounded">
+B.Eng Computer Engineering. Olabisi Onabanjo University
+                </div>
+                
+            <br>
                 <h3>Technology Summary</h3>
-                <h5>Web Development</h5>
+                <div class="p-2 border border-white rounded">
+ <h5>Web Development</h5>
                 NodeJs, Express, MongoDb, Mysql, Angular, React, JavaScript, CSS/LESS/Sass, Html, Bootstrap, Typescript</br>
                 Php, laravel, slimPHP
                 <h5>Mobile Development</h5>
@@ -244,6 +248,8 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 Python, Numpy, Pandas, Opencv, Octave.
                 <h3>Others</h3>
                 Git, XML,  Windows
+                </div>
+               
 
                 `
                 break;
