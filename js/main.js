@@ -75,7 +75,7 @@ function openWindow(element) {
         case 'angular':
             lElement = '<i class="ml-3 each-footer-icon fab fa-angular animated fadeIn" title="Angular"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-angular text-danger'
             title.innerText = 'Angular';
             body.innerHTML = `
@@ -99,7 +99,7 @@ function openWindow(element) {
         case 'react':
             lElement = '<i class="ml-3 each-footer-icon fab fa-react animated fadeIn" title="React"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-react text-info'
             title.innerText = 'ReactJs';
             body.innerHTML = `<p> This page is still under development</p>`
@@ -107,15 +107,15 @@ function openWindow(element) {
         case 'html':
             lElement = '<i class="ml-3 each-footer-icon fab fa-html5 animated fadeIn" title="Html5"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-html5'
             title.innerText = 'Html 5';
             body.innerHTML = `<p> This page is still under development</p>`
             break;
         case 'css':
-            lElement = '<i class="ml-3 each-footer-icon fab fa-css3 animated fadeIn"  title="css3"></i>';
+            lElement = '<i class="ml-3 each-footer-icon fab fa-css3 animated fadeIn" title="css3"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-css3'
             title.innerText = 'Css 3';
             body.innerHTML = `<p> This page is still under development</p>`
@@ -123,7 +123,7 @@ function openWindow(element) {
         case 'node':
             lElement = '<i class="ml-3 each-footer-icon fab fa-node animated fadeIn" title="Node js"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-node'
             title.innerText = 'NodeJs';
             body.innerHTML = `<p> This page is still under development</p>`
@@ -131,7 +131,7 @@ function openWindow(element) {
         case 'python':
             lElement = '<i class="ml-3 each-footer-icon fab fa-python animated fadeIn" title="Python"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-python'
             title.innerText = 'Python';
             body.innerHTML = `
@@ -148,7 +148,7 @@ function openWindow(element) {
         case 'java':
             lElement = '<i class="ml-3 each-footer-icon fab fa-java animated fadeIn" title="Java"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-java'
             title.innerText = 'Java';
             body.innerHTML = `<p> This page is still under development</p>`
@@ -156,7 +156,7 @@ function openWindow(element) {
         case 'android':
             lElement = '<i class="ml-3 each-footer-icon fab fa-android animated fadeIn" title="Android"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-android'
             title.innerText = 'Android';
             body.innerHTML = `<p> This page is still under development</p>`
@@ -164,7 +164,7 @@ function openWindow(element) {
         case 'php':
             lElement = '<i class="ml-3 each-footer-icon fab fa-php animated fadeIn" title="Php"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-php'
             title.innerText = 'Php';
             body.innerHTML = `<p> This page is still under development</p>`
@@ -172,7 +172,7 @@ function openWindow(element) {
         case 'js':
             lElement = '<i class="ml-3 each-footer-icon fab fa-js animated fadeIn" title="JavaScript"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-js text-js'
             title.innerText = 'JavaScript';
             body.innerHTML = `
@@ -205,7 +205,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
 
             lElement = '<img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/nativescript.svg" title="NativeScript">';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/nativescript.svg">'
             title.innerText = 'NativeScript';
             body.innerHTML = `
@@ -224,7 +224,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
         case 'kotlin':
             lElement = '<img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/kotlin.svg" title="Kotlin">';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/kotlin.svg">'
             title.innerText = 'Kotlin';
             body.innerHTML = `
@@ -235,7 +235,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
         case 'about':
             lElement = '<img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/ayo.jpg" title="Sunmola ayokunle">';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '');
-            taskBar.innerHTML += ' ' + lElement;
+            taskBar.innerHTML += lElement;
             titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/ayo.jpg">';
             title.innerText = 'Sunmola Ayokunle';
             body.innerHTML = `
@@ -308,9 +308,7 @@ function windowHeaderActions(type) {
 
 
         windowActive = false
-    }
-
-    if (type == 'minMax') {
+    }else if (type == 'minMax') {
         if (windowMinMax) { // if its already maximized
             if (isWeb) {
                 __window.style.width = '70%';
@@ -344,6 +342,13 @@ function windowHeaderActions(type) {
         }
 
 
+    } else {
+        __window.className+=' animated zoomOutDown'
+        setTimeout(() => {
+            __window.style.display = 'none';
+            document.getElementsByClassName('window')[0].className = 'window border border-dark clearfix pt-1 bg-dark text-white';
+            windowActive = false
+        }, 300);
     }
 
 

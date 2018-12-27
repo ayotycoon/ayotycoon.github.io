@@ -55,6 +55,7 @@ footer {
 .each-footer-icon {
   display: inline-block;
   font-size: 20px;
+  cursor: pointer;
 }
 /*
 colors
@@ -114,6 +115,7 @@ img {
 .task-window-icon-img {
   width: 20px;
   background-color: white;
+  cursor: pointer;
 }
 .right-tb {
   position: relative;
@@ -125,7 +127,7 @@ img {
   z-index: 10;
 }
 .fa {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 /*fonts */
 .font-1{
