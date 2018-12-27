@@ -244,11 +244,16 @@ B.Eng Computer Engineering. Olabisi Onabanjo University
                 NodeJs, Electron
                 <h5>Languages</h5>
                 Java, Javascript, TypeScript, Python, Php, Kotlin, Octave
-                <h3>Data Science and Ai</h3>
+                <h5>Data Science and Ai</h5>
                 Python, Numpy, Pandas, Opencv, Octave.
-                <h3>Others</h3>
-                Git, XML,  Windows
+                
                 </div>
+            <br>
+                <h3>Others</h3>
+                <div class="p-2 border border-white rounded">
+Git, XML,  Windows
+                </div>
+                
                
 
                 `
