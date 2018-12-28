@@ -3,11 +3,13 @@ let windowActive = false;
 let windowMinMax = false;
 let chevron = false;
 let activeWindow='';
+let snd = new Audio("./audio/click.mp3");
 
 /*
 <div class="chevron-box">44</div>
 */
 function chevronOpen() {
+    snd.play().then(r => r).catch(e => e)
     let cheIcon = document.getElementsByClassName('fa-chevron-up')[0].getBoundingClientRect();
     let cheOptions = document.getElementsByClassName('chevron-box')[0];
 
@@ -58,6 +60,8 @@ body.addEventListener('contextmenu', (e) => {
 // when you click element display window
 function openWindow(element) {
     // show the window
+
+    snd.play().then(r=> r).catch(e =>e)
 
     if (!windowActive) {
         document.getElementsByClassName('window')[0].style.display = 'block';
@@ -354,6 +358,7 @@ Git, XML,  Windows
 }
 function windowHeaderActions(type) {
     const __window = document.getElementsByClassName('window')[0];
+    snd.play().then(r => r).catch(e => e)
     // type can be close, maximize or cancel
     if (type == 'close') {
 
