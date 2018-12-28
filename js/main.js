@@ -80,8 +80,8 @@ function openWindow(element) {
             title.innerText = 'Angular';
             body.innerHTML = `
                 <h3>What is Angular?</h3>
-                <p> Angular (commonly referred to as "Angular 2+" or "Angular v2 and above")[4][5] is a TypeScript-based open-source front-end web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.</p>
-                <h3>How good am i in this framework?</h3>
+                <p> Angular (commonly referred to as "Angular 2+" or "Angular v2 and above") is a TypeScript-based open-source front-end web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.</p>
+                <hr>
                 <p> Angular is my favourite javascript framework, Infact this website is the only javascript app that i didnt write in angular, i just wanted to use plain Js for the fun of it</h3>
 <h3>Projects using this framework</h3>
                 <div class="d-inline-block m-2 window-project-icon text-center">
@@ -102,7 +102,12 @@ function openWindow(element) {
             taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-react text-info'
             title.innerText = 'ReactJs';
-            body.innerHTML = `<p> This page is still under development</p>`
+            body.innerHTML = `<h3>What is React ?</h3>
+                <p> 
+                React (also known as React.js or ReactJS) is a JavaScript library<hr> for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.
+                
+                </p>
+                `
             break;
         case 'html':
             lElement = '<i class="ml-3 each-footer-icon fab fa-html5 animated fadeIn" title="Html5"></i>';
@@ -110,7 +115,12 @@ function openWindow(element) {
             taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-html5'
             title.innerText = 'Html 5';
-            body.innerHTML = `<p> This page is still under development</p>`
+            body.innerHTML = `<h3>What is HTML ?</h3>
+                <p> 
+                Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.
+                
+                </p>
+                `
             break;
         case 'css':
             lElement = '<i class="ml-3 each-footer-icon fab fa-css3 animated fadeIn" title="css3"></i>';
@@ -118,7 +128,8 @@ function openWindow(element) {
             taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-css3'
             title.innerText = 'Css 3';
-            body.innerHTML = `<p> This page is still under development</p>`
+            body.innerHTML = `<h3> What is css?</h3>
+            <p> Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>`
             break;
         case 'node':
             lElement = '<i class="ml-3 each-footer-icon fab fa-node animated fadeIn" title="Node js"></i>';
@@ -126,7 +137,23 @@ function openWindow(element) {
             taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-node'
             title.innerText = 'NodeJs';
-            body.innerHTML = `<p> This page is still under development</p>`
+            body.innerHTML = `
+                <h3>What is NodeJs?</h3>
+                <p> Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. Typically, JavaScript is used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage's HTML and run client-side by a JavaScript engine in the user's web browser. Node.js lets developers use JavaScript to write command line tools and for server-side scripting—running scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web application development around a single programming language, rather than different languages for server side and client side scripts.</p>
+                <hr>
+                <p>
+                I'm very much comfortable with the NodeJs Eco-system. 
+                
+                </p>
+                <h3>Projects using this language</h3>
+
+                <div class="d-inline-block m-2 window-project-icon text-center">
+                <img class="bg-dark rounded" src="images/gpcalc.png"></img>
+                <p>GpCalc Mobile</p>
+                </div>
+                
+        
+                `
             break;
         case 'python':
             lElement = '<i class="ml-3 each-footer-icon fab fa-python animated fadeIn" title="Python"></i>';
@@ -137,7 +164,7 @@ function openWindow(element) {
             body.innerHTML = `
                 <h3>What is Python?</h3>
                 <p> Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales.[26] In July 2018, Van Rossum stepped down as the leader in the language community.[27][28]</p>
-                <h3>How good am i in this language?</h3>
+                <hr>
                 <p>
                 This is is my language of choice! I use python to write almost everything. From automating things on my computer to building machine learning and AI models. I'm very comfortable using this language
                 
@@ -151,15 +178,21 @@ function openWindow(element) {
             taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-java'
             title.innerText = 'Java';
-            body.innerHTML = `<p> This page is still under development</p>`
+            body.innerHTML = `<h3>What is Java?</h3>
+                <p> Java is a general-purpose computer-programming language that is concurrent, class-based, object-oriented,[15] and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA),[16] meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.[17] Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture.
+                <hr>
+                `
             break;
         case 'android':
             lElement = '<i class="ml-3 each-footer-icon fab fa-android animated fadeIn" title="Android"></i>';
             taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
             taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-android'
-            title.innerText = 'Android';
-            body.innerHTML = `<p> This page is still under development</p>`
+            title.innerText = 'Android Studio';
+            body.innerHTML = `<h3>What is Android Studio?</h3>
+                <p> Android Studio is the official<hr> integrated development environment (IDE) for Google's Android operating system, built on JetBrains' IntelliJ IDEA software and designed specifically for Android development.
+                <hr>
+                `
             break;
         case 'php':
             lElement = '<i class="ml-3 each-footer-icon fab fa-php animated fadeIn" title="Php"></i>';
@@ -167,7 +200,11 @@ function openWindow(element) {
             taskBar.innerHTML += lElement;
             titleIcon.className += ' fab fa-php'
             title.innerText = 'Php';
-            body.innerHTML = `<p> This page is still under development</p>`
+            body.innerHTML = `<h3>What is Php?</h3>
+                <p> PHP: Hypertext Preprocessor (or simply PHP) is a server-side scripting language designed for Web development. 
+                <hr>
+                slimPhp and Laravel are favourite php frameworks
+                `
             break;
         case 'js':
             lElement = '<i class="ml-3 each-footer-icon fab fa-js animated fadeIn" title="JavaScript"></i>';
@@ -179,9 +216,9 @@ function openWindow(element) {
                 <h3>What is Javascript?</h3>
                 <p> JavaScript often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification. It is a language that is also characterized as dynamic, weakly typed, prototype-based and multi-paradigm.
 
-Alongside HTML and CSS, JavaScript is one of the three core technologies of the World Wide Web.[8] JavaScript enables interactive web pages and thus is an essential part of web applications. The vast majority of websites use it,[9] and all major web browsers have a dedicated JavaScript engine to execute it.</p>
-                <h3>How good am i in this language?</h3>
-                <p> This windows desktop like experience is made possible with javascript, i can confidently say i'm super good 😊😊😉. Javascript is actually one of my favourite languages</p>
+Alongside HTML and CSS, JavaScript is one of the three core technologies of the World Wide Web. JavaScript enables interactive web pages and thus is an essential part of web applications. The vast majority of websites use it, and all major web browsers have a dedicated JavaScript engine to execute it.</p>
+                <hr>
+                <p> This windows desktop like experience is made possible with javascript. Javascript is actually one of my favourite languages</p>
                <h3>Projects using this language</h3>
 
                 <div class="d-inline-block m-2 window-project-icon text-center">
@@ -210,9 +247,10 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
             title.innerText = 'NativeScript';
             body.innerHTML = `
                 <h3>What is NativeScript?</h3>
-                <p> NativeScript is an open-source framework to develop apps on the Apple iOS and Android platforms. It was originally conceived and developed by Progress.[3] NativeScript apps are built using JavaScript, or by using any language that transpiles to JavaScript, such as TypeScript. NativeScript supports the Angular [4] and Vue JavaScript frameworks.[5] Mobile applications built with NativeScript result in fully native apps, which use the same APIs as if they were developed in Xcode or Android Studio.[6] </p>
-                <h3>How good am i in this framework?</h3>
-                <p> NativeScript is a Javascript framework, i love javascript so i'm also very good with NativeScript. I mostly use Angular with my Nativescript Applications</h3>
+                <p> NativeScript is an open-source framework to develop apps on the Apple iOS and Android platforms. It was originally conceived and developed by Progress. NativeScript apps are built using JavaScript, or by using any language that transpiles to JavaScript, such as TypeScript. NativeScript supports the Angular  and Vue JavaScript frameworks. Mobile applications built with NativeScript result in fully native apps, which use the same APIs as if they were developed in Xcode or Android Studio. </p>
+                <hr>
+                
+                <h3>Projects using this framework</h3>
                 <div class="d-inline-block m-2 window-project-icon text-center">
                 <img class="bg-dark rounded" src="./images/gpcalc.png"></img>
                 <p>GpCalc Mobile</p>
@@ -229,8 +267,27 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
             title.innerText = 'Kotlin';
             body.innerHTML = `
                 <h3>What is Kotlin?</h3>
+                <p> Kotlin is a statically typed programming language that runs on the Java virtual machine and also can be compiled to JavaScript source code or use the LLVM compiler infrastructure. It is sponsored and developed by JetBrains. </p>
+                <hr>
+                <p> Kotlin makes it easier to build core Android applications without the overly verbose nature of Java. I'm very confident in this language</h3>
                 
-                `
+
+        `
+            break;
+        case 'mongo':
+            lElement = '<img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/kotlin.svg" title="Kotlin">';
+            taskBar.innerHTML = taskBar.innerHTML.replace(RegExp(lElement), '')
+            taskBar.innerHTML += lElement;
+            titleIcon.innerHTML = '<img class="window-icon-img r-icon" src="./images/icons/mongodb.svg">'
+            title.innerText = 'Mongo Db';
+            body.innerHTML = `
+                <h3>What is Mongo Db?</h3>
+                <p> MongoDB is a cross-platform document-oriented database program. It is issued under the Server Side Public License (SSPL) version 1, which was submitted for OSI certification but later withdrawn in lieu of SSPL version 2<hr>. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata. MongoDB is developed by MongoDB Inc..</p>
+                <hr>
+                <p> This is actually my database of choice!</h3>
+                
+
+        `
             break;
         case 'about':
             lElement = '<img class="ml-3 d-inline-block task-window-icon-img r-icon animated fadeIn" src="./images/icons/ayo.jpg" title="Sunmola ayokunle">';
@@ -240,7 +297,7 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
             title.innerText = 'Sunmola Ayokunle';
             body.innerHTML = `
                 
-                <h2 class="font-1">Hi, I'm Sunmola Ayokunle.
+                <h2 class="font-1 mt-5">Hi, I'm Sunmola Ayokunle.
                 <br>
                 A <span class="l1">Software Engineer</span> in Nigeria.
                 <div style="width=100%" class="text-center">
