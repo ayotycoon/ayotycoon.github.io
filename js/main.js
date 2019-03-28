@@ -419,4 +419,4 @@ function windowHeaderActions(type) {
 function test(e) {
     console.log(e);
 }
-openWindow('about');
+//openWindow('about');

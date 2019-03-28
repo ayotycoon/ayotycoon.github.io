@@ -11,9 +11,8 @@ body {
 .body {
   width: 100%;
   height: 96%;
-  background-image: url("../images/aa.png");
-
-  background-size: cover;
+  background-color: #095A78;
+  position: relative;
 }
 .cursor {
   cursor: pointer;
@@ -32,6 +31,9 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  z-index:2;
 }
 .each-desktop-icon-container {
   padding: 5px;
@@ -83,6 +85,7 @@ colors
   height: 80%;
   margin-left: 50px;
   margin-top: 50px;
+  z-index: 10;
 
   box-sizing: border-box;
   font-family: Inconsolata;
@@ -155,6 +158,35 @@ img {
 .jump_anim{
   max-width: 300px;
 }
+.new-bg{
+  padding-top: 200px;
+  opacity: 0.5;
+}
+.code{
+  font-size: 50px;
+  color: #0EE5CE;
+}
+.code-container{
+  color:#0EE5CE;
+  border: 2px solid #0EE5CE;
+  display: inline-block;
+}
+.name{
+  color: rgb(165, 173, 173);
+  font-size: 50px;
+}
+.website{
+  color: black;
+  font-size: 30px;
+}
+.website:hover{
+  color: rgb(175, 175, 72);
+  text-decoration: none !important;
+}
+.motto{
+  color:#0EE5CE;
+  font-style: italic;
+}
 @media (max-width: 772px) {
   .normal-tb,
   .right-tb {
@@ -189,3 +221,5 @@ img {
     display: none;
   }
 }
+
+
