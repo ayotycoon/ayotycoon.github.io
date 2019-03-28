@@ -225,14 +225,14 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 <p> This windows desktop like experience is made possible with javascript. Javascript is actually one of my favourite languages</p>
                <h3>Projects using this language</h3>
 
-                <div class="d-inline-block m-2 window-project-icon text-center">
+                <a href="https://play.google.com/store/apps/details?id=com.andriod.gpcalc&hl=af" target="_blank" class="d-inline-block m-2 window-project-icon text-center">
                 <img class="bg-dark rounded" src="images/gpcalc.png"></img>
                 <p>GpCalc Mobile</p>
-                </div>
-                <div class="d-inline-block m-2 window-project-icon text-center">
+                </a>
+                <a href="https://ayotycoon.github.io/gpcalc" target="_blank" class="d-inline-block m-2 window-project-icon text-center">
                 <img class="bg-dark rounded" src="./images/gpcalc.png"></img>
                 <p>GpCalc Web App</p>
-                </div>
+                </a>
 
                 <div class="d-inline-block m-2 window-project-icon text-center">
                 <img class="bg-dark rounded" src="./images/gpcalc.png"></img>
@@ -255,10 +255,10 @@ Alongside HTML and CSS, JavaScript is one of the three core technologies of the 
                 <hr>
                 
                 <h3>Projects using this framework</h3>
-                <div class="d-inline-block m-2 window-project-icon text-center">
+                <a href="https://play.google.com/store/apps/details?id=com.andriod.gpcalc&hl=af" target="_blank" class="d-inline-block m-2 window-project-icon text-center">
                 <img class="bg-dark rounded" src="./images/gpcalc.png"></img>
                 <p>GpCalc Mobile</p>
-                </div>
+                </a>
 
 
                 `
