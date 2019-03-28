@@ -160,7 +160,7 @@ img {
 }
 .new-bg{
   padding-top: 200px;
-  opacity: 0.3;
+
 }
 .code{
   font-size: 50px;
@@ -188,6 +188,10 @@ img {
   font-style: italic;
 }
 @media (max-width: 772px) {
+  .new-bg{
+  padding-top: 150px;
+  opacity: 0.3;
+}
   .normal-tb,
   .right-tb {
     height: 25px;
