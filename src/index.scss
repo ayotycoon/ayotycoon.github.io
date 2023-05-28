@@ -1,0 +1,104 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("./font1/regular.otf") format("opentype")//, url("/assets/font1/bold.otf") format("opentype"), url("/assets/font1/italic.otf") format("opentype");
+}
+
+
+
+.light,
+.dark {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.light {
+  background-color: #f1f2f6; }
+
+.dark {
+  background-color: #282c34;
+  color: #f1f2f6; }
+
+body {
+  font-family: 'CustomFont', sans-serif;
+  overflow-x: hidden; }
+
+.cursor {
+  cursor: pointer; }
+
+.profile-img {
+  width: 40px;
+  border-radius: 50%; }
+
+.profile-img-big {
+  width: 100%; }
+
+.project-img {
+  width: 100%; }
+
+.page {
+  min-height: 100vh;
+  padding-top: 72px; }
+
+.animate-in-view {
+  visibility: hidden; }
+
+.v-visible {
+  visibility: visible; }
+
+.nowrap {
+  white-space: nowrap;
+  display: inline-block; }
+
+.navbar-container {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw; }
+
+.nav-showover {
+  display: none;
+  position: relative; }
+
+.home {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 0 !important; }
+.home h1 {
+  position: relative;
+  z-index: 2; }
+.home canvas {
+  position: absolute;
+  top: 0; }
+
+.AngularClass {
+  color: #dd0031; }
+
+.ReactClass {
+  color: #61dafb; }
+
+.NodejsClass {
+  color: #6da55f; }
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 25px; }
+  .navbar .header {
+    width: 50px; }
+  .showmorenav:hover .nav-showover {
+    display: block !important;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    right: 5%;
+    text-align: center; }
+  .showmorenav:hover .nav-showover .nav-item {
+    display: block;
+    padding: 5px; } }
