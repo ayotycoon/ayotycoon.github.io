@@ -10,15 +10,19 @@ export default class App extends Component {
     mode: "dark",
     role: "Computer Engineer"
   };
+  htmlBody = null;
   currentPage = 0;
   pages;
   languageIndex = 0;
   roleIndex = 1;
 
-  toggleMode = () => {
-    const newMode = this.state.mode === "light" ? "dark" : "light";
+  toggleMode = (mode) => {
+    if(typeof mode != 'string') mode = null;
+    const newMode = mode || this.state.mode === "light" ? "dark" : "light";
     localStorage.setItem("mode", newMode);
-    this.setState({ mode: newMode });
+    this.setState({ mode: newMode }, () =>{
+      this.htmlBody.className = newMode;
+    });
   };
   submitMail = e => {
     e.preventDefault();
@@ -29,9 +33,10 @@ export default class App extends Component {
     window.location.href = `mailto:se.ayokunle@gmail.com?subject=${subject}&body=${message} from ${name}`;
   };
   componentDidMount() {
+    this.htmlBody = document.querySelector('body');
     const newMode = localStorage.getItem("mode");
     if (newMode) {
-      this.setState({ mode: newMode });
+      this.toggleMode(newMode)
     }
 
     this.pages = document.querySelectorAll(".page");
@@ -147,7 +152,7 @@ export default class App extends Component {
 
   render() {
     return (
-        <div className={this.state.mode}>
+        <div>
           <div className="navbar-container ">
             <div className="container">
               <div className="navbar">

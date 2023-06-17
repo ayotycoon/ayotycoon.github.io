@@ -37,9 +37,8 @@ export const draw = () => {
             x: Math.random() * (canvas.width - this.radius * 2) + this.radius,
             xVelocity: (Math.random() - 0.5) * 2,
 
+            y: Math.random() * (canvas.height - this.radius * 2) + this.radius,
             yVelocity: (Math.random() - 0.5) * 2,
-
-            y: Math.random() * (canvas.height - this.radius * 2) + this.radius
         };
 
 
@@ -99,12 +98,13 @@ export const draw = () => {
     }
 
     function animate() {
-        requestAnimationFrame(animate);
+
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         circles.forEach(circle => {
             circle.draw();
         });
+        requestAnimationFrame(animate);
     }
     animate();
 };
